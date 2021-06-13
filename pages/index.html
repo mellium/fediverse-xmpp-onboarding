@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+		<title>{{.InstanceName}} — Chat Account Creation</title>
+		<base href="{{.BaseURL}}">
+		<link rel="canonical" href="{{.BaseURL}}">
+	</head>
+
+	<body>
+		<header>
+			<h1>Join the Chat</h1>
+		</header>
+		<main>
+			<section>
+			<p>
+			This service creates an account for {{.InstanceName}} users on our chat server.
+			</p>
+			<p>
+			To get started, click the verify button to verify your username on
+			{{.InstanceName}}, then scan the provided barcode in your XMPP or Jabber
+			compatible instant messaging client of choice (a few recommendations are
+			provided below).
+			</p>
+			<p><a href="{{.App.AuthURI}}">Verify</a></p>
+			</section>
+
+			<section>
+			{{block "clients" .}}
+			<h2>Find a Client</h2>
+			<details>
+				<summary>Android</summary>
+				<h3>Conversations</h3>
+				<p>
+				<a href="https://conversations.im">
+					<img src="static/conversations_logo.png" alt="Conversations Logo"/>
+				</a>
+				</p>
+				<p>
+				<a href="https://play.google.com/store/apps/details?id=eu.siacs.conversations">
+					<img src="static/playstore.png" alt="Get it on Google Play"/>
+				</a>
+				</p>
+			</details>
+			<details>
+				<summary>Linux</summary>
+				<h3>Gajim</h3>
+				<p>
+				<a href="https://gajim.org">
+					<img src="static/gajim_logo.png" alt="Gajim Logo"/>
+				</a>
+				</p>
+				<h3>Dino</h3>
+				<p>
+				<a href="https://dino.im">
+					<img src="static/dino_logo.svg" alt="Dino Logo"/>
+				</a>
+				</p>
+			</details>
+			<details>
+				<summary>macOS</summary>
+				<h3>Beagle</h3>
+				<p>
+				<a href="https://beagle.im/">
+					<img src="static/beagle_logo.png" alt="Beagle Logo"/>
+				</a>
+				</p>
+				<p>
+				<a
+					href="https://apps.apple.com/us/app/beagleim-by-tigase-inc/id1445349494">
+					<img src="static/appstore.svg" alt="Get it on the Apple App Store"/>
+				</a>
+				</p>
+			</details>
+			<details>
+				<summary>iOS</summary>
+				<h3>Siskin</h3>
+				<p>
+				<a href="https://siskin.im/">
+					<img src="static/siskin_logo.png" alt="Siskin Logo"/>
+				</a>
+				</p>
+				<p>
+				<a
+					href="https://apps.apple.com/us/app/tigase-messenger/id1153516838">
+					<img src="static/appstore.svg" alt="Get it on the Apple App Store"/>
+				</a>
+				</p>
+			</details>
+			{{end}}
+			</section>
+		</main>
+	</body>
+</html>

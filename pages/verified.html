@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+		<title>{{.InstanceName}} — Chat Account Creation</title>
+		<base href="{{.BaseURL}}">
+		<link rel="canonical" href="{{.BaseURL}}">
+	</head>
+
+	<body>
+		<header>
+			<h1>Success!</h1>
+		</header>
+		<main>
+			<section>
+				<p>
+				You can log in to your account by scanning the following barcode using
+				one of the recommended apps below.
+				If you are using a desktop application you can also click the link to
+				lunch it and finish your account setup.
+				</p>
+				<p>
+				<a href="{{.Data.URL}}">
+					<img src="{{.Data.URL | qr}}" alt="barcode that can be scanned to setup account"/>
+				</a>
+				</p>
+				<p><a href="{{.Data.URL}}">{{.Data.URL}}</a></p>
+			</section>
+
+			<section>
+				{{template "clients" .}}
+			</section>
+		</main>
+	</body>
+</html>
